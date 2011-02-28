@@ -1,11 +1,13 @@
 Blue::Application.routes.draw do
-  get "pages/home"
-  get "pages/contact"
-  get "pages/about"
-  get "pages/mission"
-  get "pages/vision"
-  get "pages/values"
-  get "users/new"
+  resources :users
+  
+  #get "pages/home"
+  #get "pages/contact"
+  #get "pages/about"
+  #get "pages/mission"
+  #get "pages/vision"
+  #get "pages/values"
+  #get "users/new"
 
 
   match '/signup',  :to => 'users#new'
@@ -13,8 +15,8 @@ Blue::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   match '/mission', :to => 'pages#mission'
-   match '/vision',   :to => 'pages#vision'
-   match '/values',    :to => 'pages#values'
+  match '/vision',   :to => 'pages#vision'
+  match '/values',    :to => 'pages#values'
   
   
   root :to => 'pages#home'
