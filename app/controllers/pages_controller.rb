@@ -10,4 +10,15 @@ class PagesController < ApplicationController
   def about
     @title = "About"
   end
+  def mission
+    @title = "Mission"
+  end
+
+  def vision
+    @title = "Vision"
+  end
+
+  def goals
+    @title = "Values"
+  end
 end
