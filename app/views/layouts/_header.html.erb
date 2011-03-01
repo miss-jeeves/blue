@@ -1,17 +1,20 @@
 <header>
-  <% logo = image_tag("ritidian.jpg", :alt => "Sample App", :class => "round",:height => 100) %>
-  <%=link_to logo, root_path%>
+
   <nav class="round">
     <ul>
       <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "About", about_path %></li>
 	<% if signed_in? %>
 	      <li><%= link_to "Profile", current_user %></li>
-	      <% end %>
-     <% if signed_in? %>
-	      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+	      <li><%= link_to "Exit", signout_path, :method => :delete %></li>
 	      <% else %>
-	      <li><%= link_to "Sign in", signin_path %></li>
+	      <li><%= link_to "Return", signin_path %></li>
+		<li><%= link_to "Join", signup_path %></li>
 	      <% end %>
     </ul>
   </nav>
+
+<% logo = image_tag("png.jpg", :alt => "Sample App", :class => "round",:width => 710) %>
+  <%=link_to logo, root_path%>
+
 </header>

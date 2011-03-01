@@ -1,52 +1,58 @@
 .container {
   width: 710px;
+  height: 800px;
 }
 
 body {
-  background: #fff;
+  background: #f2f0ee;
 }
 
 header {
+	font-size:125%;
   padding-top: 20px;
 }
 
 header img {
-  padding: 1em;
-  background: #59f;
+  background: #f2f0ee;
 }
 
 section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #59f;
+  background: #6E8FB8;
 }
 
 section h1 {
   font-size: 400%;
-  color: #fff;
+  color: #f2f0ee;
+}
+
+section h2 {
+  font-size: 200%;
+  color: #f2f0ee;
 }
 
 section hc {
-  font-size: 200%;
-  color: #fff;
-  text-align:bottom;
+  font-size: 110%;
+  color: #f2f0ee;
+  float:right;
 }
 
 /* Links */
 
 a {
-  color: #59f;
+  color: #6E8FB8;
   text-decoration: none;
 }
 
 a:hover {
-  color: #59f;
+  color: #6E8FB8;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #59f;
+  color: #6E8FB8;
 }
 
 /* Navigation */
@@ -56,7 +62,7 @@ nav {
 }
 
 nav {
-  background-color: white;
+  background-color: #f2f0ee;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -78,7 +84,7 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: #59f;
+  color: #6E8FB8;
 }
 
 nav ul li a:hover {
@@ -92,8 +98,8 @@ a.signup_button {
   display: block;
   text-align: center;
   width: 190px;
-  color: #59f;
-  background: #fff;
+  color: #6E8FB8;
+  background: #f2f0ee;
   font-size: 150%;
   font-weight: bold;
   padding: 20px;
@@ -108,6 +114,7 @@ a.signup_button {
 
 footer {
   text-align: left;
+  font-size: 125%;
   margin-top: 10px;
   width: 710px;
   margin-left: auto;
@@ -134,11 +141,11 @@ td.sidebar {
   width: 30%;
   padding: 1em;
   vertical-align: top;
-  background: #59f;
+  background: #6E8FB8;
 }
 
 .profile img.gravatar {
-  border: 1px solid #59f;
+  border: 1px solid #6E8FB8;
   margin-bottom: -15px;
 }
 
@@ -156,7 +163,7 @@ div.field div.actions {
 }
 
 .field_with_errors label {
-  color: #fff;
+  color: #f2f0ee;
 }
 
 #error_explanation {
@@ -175,7 +182,7 @@ div.field div.actions {
   font-size: 12px;
   margin: -7px;
   background-color: #c55;
-  color: #fff;
+  color: #f2f0ee;
 }
 
 #error_explanation p {

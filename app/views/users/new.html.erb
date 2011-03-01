@@ -1,4 +1,4 @@
-<h1>Sign up</h1>
+<h1>Join</h1>
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages' %> 
@@ -11,10 +11,6 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :island %><br />
-    <%= f.text_field :island %>
-  </div>
-  <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </div>
@@ -23,7 +19,7 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Join" %>
   </div>
 <% end %>
 
