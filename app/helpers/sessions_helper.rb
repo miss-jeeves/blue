@@ -17,6 +17,14 @@ module SessionsHelper
      cookies.delete(:remember_token)
      @current_user = nil
   end
+   def deny_access
+     store_location
+     redirect_to signin_path
+   end
+   def redirect_back_or(default)
+       redirect_to(session[:return_to] || default)
+       clear_return_to
+     end
    
 private
 
@@ -27,4 +35,11 @@ private
   def remember_token
     cookies.signed[:remember_token] || [nil,nil]  
   end
+  def store_location
+       session[:return_to] = request.fullpath
+     end
+
+     def clear_return_to
+       session[:return_to] = nil
+     end
 end
