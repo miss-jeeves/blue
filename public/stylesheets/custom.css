@@ -44,7 +44,7 @@ section hg {
 /* Links */
 
 a {
-  color: #6E8FB8;
+  color: #f00;
   text-decoration: none;
 }
 
@@ -54,7 +54,7 @@ a:hover {
 }
 
 a:visited {
-  color: #6E8FB8;
+  color: #f00;
 }
 
 /* Navigation */
@@ -196,4 +196,14 @@ div.field div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+ul.users {
+  margin-top: 1em;
+  color:#f00;
+  font-weight: bold;
+}
+
+.users li {
+  list-style: none;
+
 }
