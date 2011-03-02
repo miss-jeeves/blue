@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
+    @nanopost = Nanopost.new if signed_in? 
   end
 
   def contact

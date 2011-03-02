@@ -1,0 +1,14 @@
+<%= form_for :nanopost, :url =>jottings_path,  do |f| %>
+<table>
+	<td>
+<nav class = "round">
+<%= f.text_area :content %>
+</nav>  
+</td>
+<td>
+ <div class="actions">
+  <%= f.submit "note it" %>
+</div>
+</td>
+</table>
+<%end%>

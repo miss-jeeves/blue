@@ -1,15 +1,24 @@
-
-
-<table class="profile" summary="Profile information">
+<div>
+	<table class="profile" summary="Profile information">
   <tr>
     <td class="main">
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-    </td>
-    <td class="sidebar round">
-    <!--  <strong>URL</strong>  <%= link_to user_path(@user), @user %> -->
-    </td>
-  </tr>
+	
+	</td>
+	</tr>
 </table>
+
+<% if signed_in? %>
+        <%= render 'shared/nanopost_form' %>
+
+</div>
+<div class = "postings">
+<% unless @user.nanoposts.empty? %>
+         <%= render @nanoposts %> 
+         <%= will_paginate @nanoposts %>
+<% end %>
+<%end%>
+</div>

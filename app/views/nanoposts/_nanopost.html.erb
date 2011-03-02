@@ -1,0 +1,14 @@
+
+  <table><th width=500>
+    <span class="content"><%= nanopost.content %></span>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(nanopost.created_at) %> ago.
+	</span>
+</th>
+<th width=100>
+ <% if current_user?(nanopost.user) %>
+    <%= link_to "erase",nanopost, :method => :delete,
+                                     :title => nanopost.content %>
+  <% end %>
+</th>
+</table>

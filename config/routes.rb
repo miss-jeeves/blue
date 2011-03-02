@@ -3,7 +3,7 @@ Blue::Application.routes.draw do
 
   resources :users
   resources :sessions, :only =>[:new, :create, :destroy]
-
+  resources :nanoposts, :only =>[:create, :destroy]
 
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
@@ -16,7 +16,8 @@ Blue::Application.routes.draw do
   match '/vision',  :to => 'pages#vision'
   match '/values',  :to => 'pages#values'
   
-  
+  match '/jottings', :to => 'nanoposts#create'
+  match '/deletejot', :to => 'nanoposts#destroy'
   root :to => 'pages#home'
   
   
